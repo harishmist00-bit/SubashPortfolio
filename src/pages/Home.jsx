@@ -23,9 +23,9 @@ function Home() {
     </div>
 
 
-    HARISHRYA
+    // HARISHRYA
 
-    HARISHRAMYA
+    // HARISHRAMYA
   );
 }
 
