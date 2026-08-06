@@ -1,0 +1,31 @@
+.embla {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__container {
+  display: flex;
+  align-items: center;
+}
+
+.embla__slide {
+  flex: 0 0 auto;
+  min-width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  cursor: grab;
+}
+
+.embla__slide svg {
+  width: 120px;
+  height: auto;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.embla__slide:hover svg {
+  opacity: 1;
+  transform: scale(1.05);
+}
