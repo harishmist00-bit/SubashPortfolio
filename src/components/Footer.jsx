@@ -1,19 +1,18 @@
 import React from 'react'
 import { FaInstagram, FaLinkedinIn, FaGithub, FaWhatsapp } from "react-icons/fa";
-import { FiChevronRight } from "react-icons/fi";
+import { FiChevronsRight } from "react-icons/fi";
 
 const Footer = () => {
   return (
         <footer className="w-full bg-gradient-to-b from-[#F1EAFF] to-[#FFFFFF] text-gray-800">
-            <div className="max-w-7xl mx-auto px-6 pt-16 pb-4 flex flex-col items-center">
+            <div className="max-w-7xl mx-auto px-6 pt-8 pb-0 flex flex-col items-center">
                 <div className="flex items-center space-x-3 mb-6">
                     <img alt="" className="h-11"
                         src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/dummyLogo/prebuiltuiLogoSquareShapeDark.svg" />
                 </div>
 
-                <p className="text-center max-w-xl text-sm font-normal leading-relaxed pb-4">
-                    Empowering creators worldwide with the most advanced AI content creation tools. Transform your ideas
-                    into reality.
+                <p className="text-center max-w-4xl font-15 font-normal leading-relaxed pb-6">
+                    Passionate Android Developer with 1 year of experience in Java and Android Studio, focused on building reliable, user-friendly mobile applications with clean design and efficient performance.
                 </p>
                 
                 {/* Footer Navigation */}
@@ -23,40 +22,40 @@ const Footer = () => {
             href="#about"
             className="flex items-center gap-1 text-sm font-semibold uppercase hover:text-[#57E6A8] transition"
           >
-            <FiChevronRight size={16} />
+            <FiChevronsRight size={16} />
             <span>About</span>
-          </a>
-
-          <a
-            href="#projects"
-            className="flex items-center gap-1 text-sm font-semibold uppercase hover:text-[#57E6A8] transition"
-          >
-            <FiChevronRight size={16} />
-            <span>Projects</span>
           </a>
 
           <a
             href="#skills"
             className="flex items-center gap-1 text-sm font-semibold uppercase hover:text-[#57E6A8] transition"
           >
-            <FiChevronRight size={16} />
+            <FiChevronsRight size={16} />
             <span>Skills</span>
+          </a>
+
+          <a
+            href="#projects"
+            className="flex items-center gap-1 text-sm font-semibold uppercase hover:text-[#57E6A8] transition"
+          >
+            <FiChevronsRight size={16} />
+            <span>Projects</span>
+          </a>
+
+          <a
+            href="#experience"
+            className="flex items-center gap-1 text-sm font-semibold uppercase hover:text-[#57E6A8] transition"
+          >
+            <FiChevronsRight size={16} />
+            <span>Experience</span>
           </a>
 
           <a
             href="#contact"
             className="flex items-center gap-1 text-sm font-semibold uppercase hover:text-[#57E6A8] transition"
           >
-            <FiChevronRight size={16} />
+            <FiChevronsRight size={16} />
             <span>Contact</span>
-          </a>
-
-          <a
-            href="#home"
-            className="flex items-center gap-1 text-sm font-semibold uppercase hover:text-[#57E6A8] transition"
-          >
-            <FiChevronRight size={16} />
-            <span>Home</span>
           </a>
 
         </nav>             
@@ -107,7 +106,7 @@ const Footer = () => {
 
             </div>
             <div className="border-t border-slate-200">
-                <div className="max-w-7xl mx-auto px-6 py-6 text-center text-sm font-normal">
+                <div className="max-w-7xl mx-auto px-6 py-4 text-center text-sm font-normal">
                     <a href="https://prebuiltui.com">© Subash AP.</a> All rights reserved
                 </div>
             </div>
