@@ -2,7 +2,9 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
+import Qualification from "./components/Qualification";
 import Projects from "./components/Projects";
+import GetInTouch from "./components/GetInTouch";
 import Hire from "./components/Hire";
 import Footer from "./components/Footer";
 
@@ -13,8 +15,10 @@ function App() {
       <Hero />
       <About />
       <Skills />
-      <Projects />
       <Hire />
+      <Qualification />
+      <Projects />
+      <GetInTouch />
       <Footer />
     </div>
   );

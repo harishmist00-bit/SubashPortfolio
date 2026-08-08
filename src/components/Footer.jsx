@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaInstagram, FaLinkedinIn, FaGithub, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { FiChevronsRight } from "react-icons/fi";
 
 const Footer = () => {
@@ -72,17 +72,6 @@ const Footer = () => {
               >
                 <FaInstagram size={18} />
               </a>
-
-                {/* WhatsApp */}
-                <a
-                  href="https://wa.me/919567080872"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="WhatsApp"
-                  className="w-10 h-10 flex items-center justify-center rounded-md bg-gray-800 text-white hover:bg-black transition-all duration-300"
-                >
-                  <FaWhatsapp size={18} />
-                </a>
 
               {/* LinkedIn */}
               <a
