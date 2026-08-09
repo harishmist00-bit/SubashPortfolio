@@ -84,14 +84,14 @@ const GetInTouch = () => {
             Email
           </h3>
 
-          <p className="mt-1 text-[15px] text-gray-500">
-            sayyidmarvanvt@gmail.com
+          <p className="mt-2 text-[15px] text-gray-500">
+            developer.subashap17@gmail.com
           </p>
         </a>
 
         {/* WhatsApp */}
         <a
-          href="https://wa.me/919567080872"
+          href="https://wa.me/918072854180"
           target="_blank"
           rel="noopener noreferrer"
           className={`flex w-[350px] flex-col items-center justify-center rounded-[11px] border border-gray-200 bg-white p-12 transition duration-300 hover:-translate-y-1 hover:shadow-md ${
@@ -112,14 +112,14 @@ const GetInTouch = () => {
             Whatsapp
           </h3>
 
-          <p className="mt-1 text-[15px] text-gray-500">
-            9567080872
+          <p className="mt-2 text-[15px] text-gray-500">
+            8072854180
           </p>
         </a>
 
         {/* Phone */}
         <a
-          href="tel:+919567080872"
+          href="tel:+918072854180"
           className={`flex w-[350px] flex-col items-center justify-center rounded-[11px] border border-gray-200 bg-white p-12 transition duration-300 hover:-translate-y-1 hover:shadow-md ${
             visible
               ? "animate__animated animate__zoomIn smooth-animation"
@@ -138,8 +138,8 @@ const GetInTouch = () => {
             Phone
           </h3>
 
-          <p className="mt-1 text-[15px] text-gray-500">
-            9567080872
+          <p className="mt-2 text-[15px] text-gray-500">
+            +91 80728 54180
           </p>
         </a>
 

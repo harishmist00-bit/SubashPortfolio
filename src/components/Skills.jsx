@@ -3,13 +3,14 @@ import AutoScroll from "embla-carousel-auto-scroll";
 import skills1 from "../assets/skills1.png";
 import skills2 from "../assets/skills2.png";
 import skills3 from "../assets/skills3.png";
-import skills4 from "../assets/skills1.png";
-import skills5 from "../assets/skills2.png";
-import skills6 from "../assets/skills3.png";
-import skills7 from "../assets/skills1.png";
-import skills8 from "../assets/skills2.png";
-import skills9 from "../assets/skills3.png";
-import skills10 from "../assets/skills1.png";
+import skills4 from "../assets/skills4.png";
+import skills5 from "../assets/skills5.png";
+import skills6 from "../assets/skills6.png";
+import skills7 from "../assets/skills7.png";
+import skills8 from "../assets/skills8.png";
+import skills9 from "../assets/skills9.png";
+import skills10 from "../assets/skills10.png";
+import skills11 from "../assets/skills11.png";
 
 import "./Skills.css";
 
@@ -26,6 +27,7 @@ const Skills = () => {
         <img src={skills8} alt="" className="w-[100px] h-full object-cover"/>,
         <img src={skills9} alt="" className="w-[100px] h-full object-cover"/>,
         <img src={skills10} alt="" className="w-[100px] h-full object-cover"/>,
+        <img src={skills11} alt="" className="w-[100px] h-full object-cover"/>,
     ];
 
     const [emblaRef] = useEmblaCarousel(
