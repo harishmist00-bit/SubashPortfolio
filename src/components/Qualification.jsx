@@ -64,17 +64,17 @@ const Qualification = () => {
             <div className="relative grid min-h-[74px] grid-cols-2">
 
               <div className="pr-8 text-right">
-                <h3 className="text-[14px] font-medium text-slate-900">
-                  B.Tech in CSE
+                <h3 className="text-[16px] font-medium text-slate-900">
+                  BE-CSE
                 </h3>
 
-                <p className="mt-1 text-[12px] text-slate-500">
-                  VTU – Bangalore
+                <p className="mt-1 text-[14px] text-slate-500">
+                  Sri Eshwar College of Engineering,<br></br>Coimbatore
                 </p>
 
-                <div className="mt-3 flex items-center justify-end gap-1 text-[12px] text-slate-500">
-                  <FiCalendar size={12} />
-                  2019 – 2023
+                <div className="mt-3 flex items-center justify-end gap-1 text-[13px] text-slate-500">
+                  <FiCalendar size={13} />
+                  2025 – 2029
                 </div>
               </div>
 
@@ -90,17 +90,17 @@ const Qualification = () => {
               <div />
 
               <div className="pl-8 pt-1">
-                <h3 className="text-[14px] font-medium text-slate-900">
+                <h3 className="text-[16px] font-medium text-slate-900">
                   Higher Secondary
                 </h3>
 
-                <p className="mt-1 text-[12px] text-slate-500">
-                  Kerala Board
+                <p className="mt-1 text-[14px] text-slate-500">
+                  Government Model School,<br></br> Ramanthapuram
                 </p>
 
-                <div className="mt-3 flex items-center gap-1 text-[12px] text-slate-500">
-                  <FiCalendar size={12} />
-                  2017 – 2019
+                <div className="mt-3 flex items-center gap-1 text-[13px] text-slate-500">
+                  <FiCalendar size={13} />
+                  2023 – 2025
                 </div>
               </div>
 
@@ -112,17 +112,17 @@ const Qualification = () => {
             <div className="relative grid min-h-[74px] grid-cols-2">
 
               <div className="pr-8 pt-1 text-right">
-                <h3 className="text-[14px] font-medium text-slate-900">
+                <h3 className="text-[15px] font-medium text-slate-900">
                   SSLC
                 </h3>
 
-                <p className="mt-1 text-[12px] text-slate-500">
-                  A K M – Kerala
+                <p className="mt-1 text-[14px] text-slate-500">
+                  Government High School,<br></br>Vaniyankulam
                 </p>
 
-                <div className="mt-3 flex items-center justify-end gap-1 text-[12px] text-slate-500">
-                  <FiCalendar size={12} />
-                  2016 – 2017
+                <div className="mt-3 flex items-center justify-end gap-1 text-[13px] text-slate-500">
+                  <FiCalendar size={13} />
+                  2021 – 2023
                 </div>
               </div>
 
@@ -142,17 +142,17 @@ const Qualification = () => {
             <div className="relative grid min-h-[90px] grid-cols-2">
 
               <div className="pr-8 text-right">
-                <h3 className="text-[14px] font-medium text-slate-900">
-                  Android Developer
+                <h3 className="text-[15px] font-medium text-slate-900">
+                  Java Developer
                 </h3>
 
-                <p className="mt-1 text-[12px] text-slate-500">
-                  Software Company
+                <p className="mt-1 text-[14px] text-slate-500">
+                  Mist Software Solutions Pvt Ltd, <br></br>Coimbatore
                 </p>
 
-                <div className="mt-3 flex items-center justify-end gap-1 text-[12px] text-slate-500">
-                  <FiCalendar size={12} />
-                  2024 – Present
+                <div className="mt-3 flex items-center justify-end gap-1 text-[13px] text-slate-500">
+                  <FiCalendar size={13} />
+                  2026 – Present
                 </div>
               </div>
 
@@ -167,17 +167,17 @@ const Qualification = () => {
               <div />
 
               <div className="pl-8">
-                <h3 className="text-[14px] font-medium text-slate-900">
-                  Junior Developer
+                <h3 className="text-[15px] font-medium text-slate-900">
+                  Mobile App Developer
                 </h3>
 
-                <p className="mt-1 text-[12px] text-slate-500">
-                  Software Company
+                <p className="mt-1 text-[14px] text-slate-500">
+                  Web Spire Labs Pvt Ltd, <br></br> Coimbatore
                 </p>
 
-                <div className="mt-3 flex items-center gap-1 text-[12px] text-slate-500">
-                  <FiCalendar size={12} />
-                  2023 – 2024
+                <div className="mt-3 flex items-center gap-1 text-[13px] text-slate-500">
+                  <FiCalendar size={13} />
+                  2025 – 2026
                 </div>
               </div>
 
