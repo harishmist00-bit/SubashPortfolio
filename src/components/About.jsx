@@ -1,157 +1,315 @@
+import React from "react";
 import {
-  FaFacebookF,
-  FaTwitter,
+  FaWhatsapp,
+  FaGithub,
   FaInstagram,
-  FaDribbble,
+  FaLinkedinIn,
 } from "react-icons/fa";
+import about from "../assets/about.png";
 
 const About = () => {
   return (
-    <section className="bg-white py-20">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-20 lg:py-28 bg-white">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8">
 
-        <div className="grid lg:grid-cols-2 gap-14 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-          {/* Left Side */}
+          {/* ================= LEFT SIDE ================= */}
+          <div className="relative flex justify-center items-center min-h-[500px]">
 
-          <div className="relative flex justify-center">
+            {/* Orange Circle */}
+            <div
+  className="
+    absolute
+    w-[300px]
+    h-[400px]
+    sm:w-[350px]
+    sm:h-[400px]
+    lg:w-[400px]
+    lg:h-[450px]
+    bg-orange-500
+    rounded-t-full
+    bottom-[1px]
+    left-1/2
+    -translate-x-1/2
+  "
+></div>
 
-            {/* Orange Background */}
-
-            <div className="absolute w-[330px] h-[330px] bg-orange-500 rounded-full left-8 top-10"></div>
-
-            {/* Image */}
-
+            {/* Person Image */}
             <img
-              src="/about.png"
-              alt="About"
-              className="relative w-[330px] z-10"
+              src={about}
+              alt="Subash AP - Android Developer"
+              className="
+                relative
+                z-10
+                w-[290px]
+                sm:w-[340px]
+                lg:w-[400px]
+                object-contain
+                mt-[-10px]
+              "
             />
 
-            {/* Experience Card */}
-
-            <div className="absolute left-0 bottom-8 bg-white shadow-xl rounded-xl px-5 py-3 flex items-center gap-4 z-20">
-
+            {/* Completed Projects Card */}
+            <div
+              className="
+                absolute
+                z-20
+                left-[5%]
+                bottom-[55px]
+                bg-white
+                rounded-xl
+                shadow-[0_10px_35px_rgba(0,0,0,0.12)]
+                px-5
+                py-4
+                flex
+                items-center
+                gap-4
+              "
+            >
               <div className="text-3xl font-bold text-orange-500">
-                450+
+                5+
               </div>
 
-              <div className="text-sm text-gray-600">
-                Completed <br /> Projects
+              <div className="text-sm leading-5 text-gray-600">
+                Completed
+                <br />
+                Projects
               </div>
-
             </div>
 
           </div>
 
-          {/* Right Side */}
 
+          {/* ================= RIGHT SIDE ================= */}
           <div>
 
-            <p className="text-orange-500 uppercase tracking-[5px] font-semibold mb-2">
+            {/* Small Heading */}
+            <p
+              className="
+                text-orange-500
+                uppercase
+                tracking-[5px]
+                font-semibold
+                text-sm
+                mb-3
+              "
+            >
               About Me
             </p>
 
-            <h2 className="text-5xl font-bold text-gray-900">
-              Who is
+
+            {/* Main Heading */}
+            <h2
+              className="
+                text-4xl
+                sm:text-5xl
+                lg:text-[52px]
+                leading-tight
+                font-bold
+                text-gray-900
+              "
+            >
+              Who is{" "}
               <span className="text-orange-500">
-                {" "}Oliver Scott?
+                Subash AP?
               </span>
             </h2>
 
-            <p className="text-gray-500 leading-8 mt-6">
-              I’m a creative UI/UX designer with years of experience
-              creating beautiful websites and digital products.
-              I love solving problems through design while delivering
-              amazing user experiences.
+
+            {/* Description */}
+            <p
+              className="
+                mt-6
+                text-gray-500
+                text-[16px]
+                leading-8
+                max-w-xl
+              "
+            >
+              I’m an Android Developer with 1 year of experience
+              building reliable and user-friendly mobile applications
+              using Java and Android Studio. I enjoy turning ideas into
+              clean, functional, and engaging mobile experiences.
             </p>
 
-            {/* Stats */}
 
-            <div className="grid grid-cols-3 gap-10 mt-10">
+            {/* ================= STATS ================= */}
+            <div
+              className="
+                grid
+                grid-cols-3
+                gap-6
+                sm:gap-10
+                mt-10
+              "
+            >
 
+              {/* Projects */}
               <div>
-                <h3 className="text-4xl font-bold text-gray-900">
-                  750+
+                <h3 className="text-3xl sm:text-4xl font-bold text-gray-900">
+                  5+
                 </h3>
 
-                <p className="text-gray-500 mt-2">
+                <p className="mt-2 text-sm sm:text-base text-gray-500">
                   Projects Done
                 </p>
               </div>
 
+
+              {/* Experience */}
               <div>
-                <h3 className="text-4xl font-bold text-gray-900">
-                  25Y
+                <h3 className="text-3xl sm:text-4xl font-bold text-gray-900">
+                  1+
                 </h3>
 
-                <p className="text-gray-500 mt-2">
-                  Experience
+                <p className="mt-2 text-sm sm:text-base text-gray-500">
+                  Years of Experience
                 </p>
               </div>
 
+
+              {/* Technologies */}
               <div>
-                <h3 className="text-4xl font-bold text-gray-900">
-                  35+
+                <h3 className="text-3xl sm:text-4xl font-bold text-gray-900">
+                  10+
                 </h3>
 
-                <p className="text-gray-500 mt-2">
-                  Awards Won
+                <p className="mt-2 text-sm sm:text-base text-gray-500">
+                  Technologies
                 </p>
               </div>
 
             </div>
 
+
             {/* Divider */}
+            <div className="border-t border-gray-200 my-9"></div>
 
-            <div className="border-t my-10"></div>
 
-            {/* Bottom */}
+            {/* ================= BOTTOM ================= */}
+            <div
+              className="
+                flex
+                flex-col
+                sm:flex-row
+                sm:items-center
+                justify-between
+                gap-6
+              "
+            >
 
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-
-              {/* Signature */}
-
+              {/* Name */}
               <div>
-                <h3 className="text-2xl font-bold text-orange-500 italic">
-                  Oliver Scott
+                <h3
+                  className="
+                    text-2xl
+                    font-bold
+                    italic
+                    text-orange-500
+                  "
+                >
+                  Subash AP
                 </h3>
 
-                <p className="text-gray-500">
-                  UI / UX Designer
+                <p className="mt-1 text-gray-500">
+                  Android Developer
                 </p>
               </div>
 
-              {/* Social */}
 
-              <div className="flex gap-4">
+              {/* Social Icons */}
+              <div className="flex gap-3">
 
+                {/* WhatsApp */}
                 <a
                   href="#"
-                  className="w-11 h-11 rounded-full bg-orange-100 text-orange-500 flex items-center justify-center hover:bg-orange-500 hover:text-white duration-300"
+                  aria-label="WhatsApp"
+                  className="
+                    w-11 h-11
+                    rounded-full
+                    bg-orange-100
+                    text-orange-500
+                    flex
+                    items-center
+                    justify-center
+                    transition-all
+                    duration-300
+                    hover:bg-orange-500
+                    hover:text-white
+                    hover:-translate-y-1
+                  "
                 >
-                  <FaFacebookF />
+                  <FaWhatsapp size={17} />
                 </a>
 
+
+                {/* Instagram */}
                 <a
                   href="#"
-                  className="w-11 h-11 rounded-full bg-orange-100 text-orange-500 flex items-center justify-center hover:bg-orange-500 hover:text-white duration-300"
+                  aria-label="Instagram"
+                  className="
+                    w-11 h-11
+                    rounded-full
+                    bg-orange-100
+                    text-orange-500
+                    flex
+                    items-center
+                    justify-center
+                    transition-all
+                    duration-300
+                    hover:bg-orange-500
+                    hover:text-white
+                    hover:-translate-y-1
+                  "
                 >
-                  <FaTwitter />
+                  <FaInstagram size={17} />
                 </a>
 
+
+                {/* LinkedIn */}
                 <a
                   href="#"
-                  className="w-11 h-11 rounded-full bg-orange-100 text-orange-500 flex items-center justify-center hover:bg-orange-500 hover:text-white duration-300"
+                  aria-label="LinkedIn"
+                  className="
+                    w-11 h-11
+                    rounded-full
+                    bg-orange-100
+                    text-orange-500
+                    flex
+                    items-center
+                    justify-center
+                    transition-all
+                    duration-300
+                    hover:bg-orange-500
+                    hover:text-white
+                    hover:-translate-y-1
+                  "
                 >
-                  <FaInstagram />
+                  <FaLinkedinIn size={17} />
                 </a>
 
+
+                {/* GitHub */}
                 <a
                   href="#"
-                  className="w-11 h-11 rounded-full bg-orange-100 text-orange-500 flex items-center justify-center hover:bg-orange-500 hover:text-white duration-300"
+                  aria-label="GitHub"
+                  className="
+                    w-11 h-11
+                    rounded-full
+                    bg-orange-100
+                    text-orange-500
+                    flex
+                    items-center
+                    justify-center
+                    transition-all
+                    duration-300
+                    hover:bg-orange-500
+                    hover:text-white
+                    hover:-translate-y-1
+                  "
                 >
-                  <FaDribbble />
+                  <FaGithub size={17} />
                 </a>
 
               </div>

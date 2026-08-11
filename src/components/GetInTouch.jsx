@@ -65,7 +65,7 @@ const GetInTouch = () => {
 
         {/* Email */}
         <a
-          href="mailto:sayyidmarvanvt@gmail.com"
+          href="mailto:developer.subashap17@gmail.com"
           className={`flex w-[350px] flex-col items-center justify-center rounded-[11px] border border-gray-200 bg-white p-12 transition duration-300 hover:-translate-y-1 hover:shadow-md ${
             visible
               ? "animate__animated animate__zoomIn smooth-animation"

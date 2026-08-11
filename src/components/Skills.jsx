@@ -1,5 +1,6 @@
 import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-auto-scroll";
+
 import skills1 from "../assets/skills1.png";
 import skills2 from "../assets/skills2.png";
 import skills3 from "../assets/skills3.png";
@@ -15,49 +16,48 @@ import skills11 from "../assets/skills11.png";
 import "./Skills.css";
 
 const Skills = () => {
-
   const logos = [
-        <img src={skills1} alt="" className="w-[100px] h-full object-cover"/>,
-        <img src={skills2} alt="" className="w-[130px] h-full object-contain absolute top-[18px]"/>,
-        <img src={skills3} alt="" className="w-[110px] h-full object-contain absolute top-[18px]"/>,
-        <img src={skills4} alt="" className="w-[100px] h-full object-cover"/>,
-        <img src={skills5} alt="" className="w-[100px] h-full object-cover"/>,
-        <img src={skills6} alt="" className="w-[100px] h-full object-cover"/>,
-        <img src={skills7} alt="" className="w-[100px] h-full object-cover"/>,
-        <img src={skills8} alt="" className="w-[100px] h-full object-cover"/>,
-        <img src={skills9} alt="" className="w-[100px] h-full object-cover"/>,
-        <img src={skills10} alt="" className="w-[100px] h-full object-cover"/>,
-        <img src={skills11} alt="" className="w-[100px] h-full object-cover"/>,
-    ];
+    skills1,
+    skills2,
+    skills3,
+    skills4,
+    skills5,
+    skills6,
+    skills7,
+    skills8,
+    skills9,
+    skills10,
+    skills11,
+  ];
 
-    const [emblaRef] = useEmblaCarousel(
-  {
-    loop: true,
-    dragFree: true,
-    align: "start",
-  },
-  [
-    AutoScroll({
-      speed: 1.2,
-      stopOnInteraction: false,
-      stopOnMouseEnter: true,
-    }),
-  ]
-);
+  const [emblaRef] = useEmblaCarousel(
+    {
+      loop: true,
+      dragFree: true,
+      align: "start",
+    },
+    [
+      AutoScroll({
+        speed: 1.2,
+        stopOnInteraction: false,
+        stopOnMouseEnter: true,
+      }),
+    ]
+  );
 
- return (
-  <div className="max-w-7xl mx-auto px-6 py-16">
-    <div className="embla" ref={emblaRef}>
-      <div className="embla__container">
-        {logos.map((logo, index) => (
-          <div className="embla__slide" key={index}>
-            {logo}
-          </div>
-        ))}
+  return (
+    <section className="max-w-7xl mx-auto skills-section pt-28 pb-16">
+      <div className="skills-embla" ref={emblaRef}>
+        <div className="skills-container">
+          {logos.map((logo, index) => (
+            <div className="skills-slide" key={index}>
+              <img src={logo} alt={`Skill ${index + 1}`} />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
-  </div>
-);
+    </section>
+  );
 };
 
 export default Skills;

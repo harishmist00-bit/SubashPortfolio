@@ -16,7 +16,7 @@ const Qualification = () => {
       {/* Heading */}
       <div className="text-center">
         <h1 className="text-[36px] font-semibold text-slate-900">
-          Qualification
+          My personal journey
         </h1>
 
         <p className="mt-1 text-[13px] text-slate-500">
