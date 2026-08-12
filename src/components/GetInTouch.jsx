@@ -36,7 +36,7 @@ const GetInTouch = () => {
   return (
     <div
       ref={sectionRef}
-      className="bg-[#FAFAFA] px-4 pt-8 pb-12"
+      className="bg-[#FAFAFA] px-4 pt-8 pb-12" id="contact"
     >
       {/* Heading */}
       <div className="mb-15 text-center">

@@ -19,8 +19,13 @@ const Qualification = () => {
           My personal journey
         </h1>
 
-        <p className="mt-1 text-[13px] text-slate-500">
-          My personal journey
+        <p
+          className={`mx-auto max-w-3xl pb-8 text-[15px] leading-relaxed text-slate-600`}
+          style={{
+            animationDelay: "0.2s",
+          }}
+        >
+          A journey from earning my BE in Computer Science and Engineering to building Android applications with Java, driven by continuous learning and a passion for mobile development.
         </p>
       </div>
 
