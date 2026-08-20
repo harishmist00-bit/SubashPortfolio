@@ -96,7 +96,7 @@ const Footer = () => {
             </div>
             <div className="border-t border-slate-200">
                 <div className="max-w-7xl mx-auto px-6 py-4 text-center text-sm font-normal">
-                    <a href="https://prebuiltui.com">© Subash AP.</a> All rights reserved
+                    <a href="index.html">© Subash AP.</a> All rights reserved
                 </div>
             </div>
         </footer>

@@ -11,19 +11,17 @@ const Hero = () => {
 
         <div>
 
-          <h3 className="text-5xl lg:text-7xl font-black leading-tight">
-            HI, I'M ZYAN!
+          <h3 className="text-5xl lg:text-5xl font-bold leading-tight txt-black">
+            Hi, I'm Subash!
           </h3>
 
-          <h1 className="text-6xl lg:text-8xl font-black mt-2">
-            CREATIVE
-            <span className="text-[#57E6A8]">PLAYER</span>
+          <h1 className="text-6xl lg:text-8xl font-black mt-2 txt-black">
+            ANDROID
+            <span className="text-[#57E6A8]">DEVELOPER</span>
           </h1>
 
-          <p className="text-gray-400 mt-8 leading-9 text-lg max-w-xl">
-            I'm a passionate UI/UX designer with a mission to create
-            delightful digital experiences. With a strong foundation in
-            design principles and a keen eye for detail.
+          <p className="text-gray-800 mt-8 leading-9 text-md max-w-xl text-justify">
+            I’m an Android Developer with 1 year of experience building userfriendly mobile applications using Java and Android Studio, focused on clean code, performance, and great user experiences.
           </p>
 
           <div className="flex items-center gap-8 mt-10">

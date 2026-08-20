@@ -3,7 +3,7 @@ import { Play, Download } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <header className="w-full flex justify-center pt-6 absolute top-0 left-0 z-50">
+    <header className="w-full flex justify-center pt-6 absolute top-0 left-0 z-50 text-white">
       <div className="w-[90%] max-w-7xl bg-[#171c27] flex items-center justify-between h-20">
 
         {/* Logo */}
