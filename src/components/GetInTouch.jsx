@@ -1,12 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
 import { FiMail, FiPhone } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
-import { FiArrowRight, FiGlobe, FiLinkedin, FiGithub } from "react-icons/fi";
 import reachImg from "../assets/reach.png";
+import emailjs from "@emailjs/browser";
 
 const GetInTouch = () => {
   const sectionRef = useRef(null);
+
   const [visible, setVisible] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+  const [sendError, setSendError] = useState("");
 
   // Form state
   const [formData, setFormData] = useState({
@@ -18,6 +22,16 @@ const GetInTouch = () => {
 
   const [errors, setErrors] = useState({});
 
+  // =========================
+  // EMAILJS CONFIGURATION
+  // =========================
+  const SERVICE_ID = "service_i7u4xoc";
+  const TEMPLATE_ID = "template_unqefb9";
+  const PUBLIC_KEY = "XnWGQmHRG5974ertG";
+
+  // =========================
+  // SCROLL ANIMATION
+  // =========================
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -38,7 +52,9 @@ const GetInTouch = () => {
     return () => observer.disconnect();
   }, []);
 
-  // Handle input changes
+  // =========================
+  // HANDLE INPUT CHANGES
+  // =========================
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -46,10 +62,17 @@ const GetInTouch = () => {
     if (name === "name") {
       const onlyLetters = value.replace(/[^a-zA-Z\s]/g, "");
 
-      setFormData({
-        ...formData,
+      setFormData((prev) => ({
+        ...prev,
         name: onlyLetters,
-      });
+      }));
+
+      if (errors.name) {
+        setErrors((prev) => ({
+          ...prev,
+          name: "",
+        }));
+      }
 
       return;
     }
@@ -58,23 +81,42 @@ const GetInTouch = () => {
     if (name === "mobile") {
       const onlyNumbers = value.replace(/\D/g, "").slice(0, 10);
 
-      setFormData({
-        ...formData,
+      setFormData((prev) => ({
+        ...prev,
         mobile: onlyNumbers,
-      });
+      }));
+
+      if (errors.mobile) {
+        setErrors((prev) => ({
+          ...prev,
+          mobile: "",
+        }));
+      }
 
       return;
     }
 
-    setFormData({
-      ...formData,
+    setFormData((prev) => ({
+      ...prev,
       [name]: value,
-    });
+    }));
+
+    if (errors[name]) {
+      setErrors((prev) => ({
+        ...prev,
+        [name]: "",
+      }));
+    }
   };
 
-  // Form validation
-  const handleSubmit = (e) => {
+  // =========================
+  // FORM SUBMIT
+  // =========================
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    setSuccessMessage("");
+    setSendError("");
 
     const newErrors = {};
 
@@ -108,11 +150,35 @@ const GetInTouch = () => {
 
     setErrors(newErrors);
 
-    // If no errors
-    if (Object.keys(newErrors).length === 0) {
-      console.log("Form submitted:", formData);
+    // Stop if validation fails
+    if (Object.keys(newErrors).length > 0) {
+      return;
+    }
 
-      alert("Message sent successfully!");
+    try {
+      setIsSending(true);
+
+      // Data sent to EmailJS template
+      const templateParams = {
+        name: formData.name,
+        mobile: formData.mobile,
+        email: formData.email,
+        comment: formData.comment,
+      };
+
+      // Send email
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        templateParams,
+        PUBLIC_KEY
+      );
+
+      console.log("Email sent successfully:", formData);
+
+      setSuccessMessage(
+        "Message sent successfully! I'll get back to you soon."
+      );
 
       // Clear form
       setFormData({
@@ -121,6 +187,16 @@ const GetInTouch = () => {
         email: "",
         comment: "",
       });
+
+      setErrors({});
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+
+      setSendError(
+        "Failed to send message. Please try again later."
+      );
+    } finally {
+      setIsSending(false);
     }
   };
 
@@ -130,7 +206,9 @@ const GetInTouch = () => {
       className="bg-[#FAFAFA] px-4 pt-8 pb-12 scroll-mt-24"
       id="contact"
     >
-      {/* Heading */}
+      {/* =========================
+          HEADING
+      ========================= */}
       <div className="mb-15 text-center">
         <h1
           className={`mb-2 text-[36px] font-medium text-slate-900 ${
@@ -157,6 +235,9 @@ const GetInTouch = () => {
         </p>
       </div>
 
+      {/* =========================
+          IMAGE + FORM
+      ========================= */}
       <div className="mx-auto max-w-7xl px-5 pt-12 pb-12 sm:px-8 lg:px-24 lg:pb-8 lg:pt-0">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
 
@@ -174,10 +255,10 @@ const GetInTouch = () => {
 
             <form onSubmit={handleSubmit} className="space-y-4">
 
-              {/* Name + Mobile */}
+              {/* NAME + MOBILE */}
               <div className="grid gap-4 sm:grid-cols-2">
 
-                {/* Name */}
+                {/* NAME */}
                 <div>
                   <label className="mb-2 block text-[14px] font-medium text-[#071b41]">
                     Your Name :
@@ -203,7 +284,7 @@ const GetInTouch = () => {
                   )}
                 </div>
 
-                {/* Mobile */}
+                {/* MOBILE */}
                 <div>
                   <label className="mb-2 block text-[14px] font-medium text-[#071b41]">
                     Mobile :
@@ -230,10 +311,9 @@ const GetInTouch = () => {
                     </p>
                   )}
                 </div>
-
               </div>
 
-              {/* Email */}
+              {/* EMAIL */}
               <div>
                 <label className="mb-2 block text-[14px] font-medium text-[#071b41]">
                   Email :
@@ -259,7 +339,7 @@ const GetInTouch = () => {
                 )}
               </div>
 
-              {/* Message */}
+              {/* MESSAGE */}
               <div>
                 <label className="mb-2 block text-[14px] font-medium text-[#071b41]">
                   Your Comment :
@@ -285,12 +365,31 @@ const GetInTouch = () => {
                 )}
               </div>
 
-              {/* Button */}
+              {/* SUCCESS MESSAGE */}
+              {successMessage && (
+                <p className="rounded-[8px] bg-green-50 px-3 py-2 text-[13px] text-green-600">
+                  {successMessage}
+                </p>
+              )}
+
+              {/* ERROR MESSAGE */}
+              {sendError && (
+                <p className="rounded-[8px] bg-red-50 px-3 py-2 text-[13px] text-red-500">
+                  {sendError}
+                </p>
+              )}
+
+              {/* BUTTON */}
               <button
                 type="submit"
-                className="mt-1 inline-flex h-[38px] items-center gap-2 rounded-[10px] bg-orange-500 px-5 text-[14px] font-medium text-white transition duration-300 hover:bg-orange-600"
+                disabled={isSending}
+                className={`mt-1 inline-flex h-[38px] items-center gap-2 rounded-[10px] px-5 text-[14px] font-medium text-white transition duration-300 ${
+                  isSending
+                    ? "cursor-not-allowed bg-orange-300"
+                    : "bg-orange-500 hover:bg-orange-600"
+                }`}
               >
-                Send Message
+                {isSending ? "Sending..." : "Send Message"}
               </button>
 
             </form>
@@ -298,10 +397,12 @@ const GetInTouch = () => {
         </div>
       </div>
 
-      {/* Cards */}
+      {/* =========================
+          CONTACT CARDS
+      ========================= */}
       <div className="flex flex-wrap items-center justify-center gap-[14px]">
 
-        {/* Email */}
+        {/* EMAIL */}
         <a
           href="mailto:developer.subashap17@gmail.com"
           className={`flex w-[350px] flex-col items-center justify-center rounded-[11px] border border-gray-200 bg-white p-12 transition duration-300 hover:-translate-y-1 hover:shadow-md ${
@@ -324,7 +425,7 @@ const GetInTouch = () => {
           </p>
         </a>
 
-        {/* WhatsApp */}
+        {/* WHATSAPP */}
         <a
           href="https://wa.me/918072854180"
           target="_blank"
@@ -349,7 +450,7 @@ const GetInTouch = () => {
           </p>
         </a>
 
-        {/* Phone */}
+        {/* PHONE */}
         <a
           href="tel:+918072854180"
           className={`flex w-[350px] flex-col items-center justify-center rounded-[11px] border border-gray-200 bg-white p-12 transition duration-300 hover:-translate-y-1 hover:shadow-md ${

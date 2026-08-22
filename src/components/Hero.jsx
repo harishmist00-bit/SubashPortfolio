@@ -11,13 +11,13 @@ const Hero = () => {
 
         <div>
 
-          <h3 className="text-5xl lg:text-5xl font-bold leading-tight txt-black">
+          <h3 className="text-5xl lg:text-4xl font-bold leading-tight txt-black">
             Hi, I'm Subash!
           </h3>
 
-          <h1 className="text-6xl lg:text-8xl font-black mt-2 txt-black">
+          <h1 className="text-6xl lg:text-6xl font-black mt-2 txt-black">
             ANDROID
-            <span className="text-[#57E6A8]">DEVELOPER</span>
+            <span className="text-[#57E6A8] ms-4">DEVELOPER</span>
           </h1>
 
           <p className="text-gray-800 mt-8 leading-9 text-md max-w-xl text-justify">
@@ -61,7 +61,7 @@ const Hero = () => {
             {/* Outer Hexagon */}
 
             <div
-              className="w-[500px] h-[560px] border-[12px] border-[#57E6A8] overflow-hidden"
+              className="w-[500px] h-[560px] border-[12px] overflow-hidden"
               style={{
                 clipPath:
                   "polygon(25% 5%,75% 5%,100% 30%,100% 70%,75% 95%,25% 95%,0% 70%,0% 30%)",
